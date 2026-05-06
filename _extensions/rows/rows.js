@@ -1,6 +1,6 @@
-window.RevealGrid = function () {
+window.RevealRows = function () {
   return {
-    id: "RevealGrid",
+    id: "RevealRows",
     init: function (deck) {
       function offsetFromAncestor(el, ancestor) {
         var top = 0;

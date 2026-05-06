@@ -1,11 +1,11 @@
-title: Grid
+title: Rows
 author: Emil Hvitfeldt
 version: 1.0.0
 quarto-required: ">=1.2.0"
 contributes:
   revealjs-plugins:
-    - name: RevealGrid
+    - name: RevealRows
       script:
-        - grid.js
+        - rows.js
       stylesheet:
-        - grid.css
+        - rows.css

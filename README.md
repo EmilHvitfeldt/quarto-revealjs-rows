@@ -1,17 +1,17 @@
-# grid
+# rows
 
 A [Quarto](https://quarto.org) extension for [Reveal.js](https://quarto.org/docs/presentations/revealjs/) that adds `.rows` / `.row` containers — the vertical counterpart to Quarto's built-in `.columns` / `.column`. Combine the two to lay slide content out as an arbitrary grid.
 
 ## Installation
 
 ```bash
-quarto add EmilHvitfeldt/quarto-revealjs-grid
+quarto add EmilHvitfeldt/quarto-revealjs-rows
 ```
 
 Or to start a new presentation from the template:
 
 ```bash
-quarto use template EmilHvitfeldt/quarto-revealjs-grid
+quarto use template EmilHvitfeldt/quarto-revealjs-rows
 ```
 
 ## Usage
@@ -22,7 +22,7 @@ Enable the plugin in your presentation's YAML:
 ---
 format: revealjs
 revealjs-plugins:
-  - grid
+  - rows
 ---
 ```
 
@@ -87,4 +87,4 @@ When you put 3+ columns inside a row, give each `.column` an explicit width (Qua
 
 `.rows` is a vertical flexbox and each `.row` gets `flex: 1`, so rows divide the available height evenly. The tricky part is making `.rows` know how much height is available — Reveal.js scales the slide and the `height: 100%` cascade is unreliable through it.
 
-A small Reveal.js plugin (`grid.js`) hooks the `ready`, `slidechanged`, and `resize` events, walks `offsetTop` from each `.rows` up to its slide, and sets the inline height to fill from there to the bottom of the slide. The plugin only touches `.rows` on the currently presented slide, so it stays in sync as you navigate.
+A small Reveal.js plugin (`rows.js`) hooks the `ready`, `slidechanged`, and `resize` events, walks `offsetTop` from each `.rows` up to its slide, and sets the inline height to fill from there to the bottom of the slide. The plugin only touches `.rows` on the currently presented slide, so it stays in sync as you navigate.

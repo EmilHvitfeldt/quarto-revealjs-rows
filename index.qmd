@@ -1,9 +1,9 @@
 ---
-title: "grid"
-subtitle: "quarto-revealjs-grid"
+title: "rows"
+subtitle: "quarto-revealjs-rows"
 format: revealjs
 revealjs-plugins:
-  - grid
+  - rows
 ---
 
 ## Syntax
