@@ -1,0 +1,340 @@
+---
+title: "grid"
+subtitle: "quarto-revealjs-grid"
+format: revealjs
+revealjs-plugins:
+  - grid
+---
+
+## Syntax
+
+The plugin adds `.rows` and `.row` divs that mirror Quarto's built-in `.columns` and `.column`:
+
+```markdown
+::: {.rows}
+::: {.row}
+top
+:::
+::: {.row}
+bottom
+:::
+:::
+```
+
+`.rows` is a vertical flexbox; each `.row` divides the available height evenly.
+
+## Nesting
+
+`.rows` and `.columns` can be nested in either direction. Put rows inside a column:
+
+```markdown
+::: {.columns}
+::: {.column}
+left
+:::
+::: {.column}
+::: {.rows}
+::: {.row}
+a
+:::
+::: {.row}
+b
+:::
+:::
+:::
+:::
+```
+
+## Nesting (cont.)
+
+…or columns inside a row:
+
+```markdown
+::: {.rows}
+::: {.row}
+top
+:::
+::: {.row}
+::: {.columns}
+::: {.column}
+a
+:::
+::: {.column}
+b
+:::
+:::
+:::
+:::
+```
+
+## Widths
+
+Three or more columns still need explicit widths (a Quarto requirement, not a grid one):
+
+```markdown
+::: {.columns}
+::: {.column width="33%"}
+a
+:::
+::: {.column width="33%"}
+b
+:::
+::: {.column width="33%"}
+c
+:::
+:::
+```
+
+Rows do not need widths — they always divide the available height evenly.
+
+# Examples {.center}
+
+## 2 rows in 1 column
+
+::: {.columns}
+
+::: {.column}
+
+column 1
+
+:::
+
+::: {.column}
+
+::: {.rows}
+
+::: {.row}
+
+row 1
+
+:::
+
+::: {.row}
+
+row 2
+
+:::
+
+:::
+
+:::
+
+:::
+
+## 3 rows in 1 column
+
+::: {.columns}
+
+::: {.column}
+
+column 1
+
+:::
+
+::: {.column}
+
+::: {.rows}
+
+::: {.row}
+
+row 1
+
+:::
+
+::: {.row}
+
+row 2
+
+:::
+
+::: {.row}
+
+row 3
+
+:::
+
+:::
+
+:::
+
+:::
+
+## rows in both columns
+
+::: {.columns}
+
+::: {.column}
+
+::: {.rows}
+
+::: {.row}
+
+left, row 1
+
+:::
+
+::: {.row}
+
+left, row 2
+
+:::
+
+:::
+
+:::
+
+::: {.column}
+
+::: {.rows}
+
+::: {.row}
+
+right, row 1
+
+:::
+
+::: {.row}
+
+right, row 2
+
+:::
+
+::: {.row}
+
+right, row 3
+
+:::
+
+:::
+
+:::
+
+:::
+
+## columns inside a row
+
+::: {.rows}
+
+::: {.row}
+
+top row
+
+:::
+
+::: {.row}
+
+::: {.columns}
+
+::: {.column}
+
+bottom, column 1
+
+:::
+
+::: {.column}
+
+bottom, column 2
+
+:::
+
+:::
+
+:::
+
+:::
+
+## columns inside every row
+
+::: {.rows}
+
+::: {.row}
+
+::: {.columns}
+
+::: {.column width="33%"}
+
+top, column 1
+
+:::
+
+::: {.column width="33%"}
+
+top, column 2
+
+:::
+
+::: {.column width="33%"}
+
+top, column 3
+
+:::
+
+:::
+
+:::
+
+::: {.row}
+
+::: {.columns}
+
+::: {.column}
+
+bottom, column 1
+
+:::
+
+::: {.column}
+
+bottom, column 2
+
+:::
+
+:::
+
+:::
+
+:::
+
+## 3 columns, rows in the middle
+
+::: {.columns}
+
+::: {.column width="33%"}
+
+column 1
+
+:::
+
+::: {.column width="33%"}
+
+::: {.rows}
+
+::: {.row}
+
+row 1
+
+:::
+
+::: {.row}
+
+row 2
+
+:::
+
+::: {.row}
+
+row 3
+
+:::
+
+:::
+
+:::
+
+::: {.column width="33%"}
+
+column 3
+
+:::
+
+:::

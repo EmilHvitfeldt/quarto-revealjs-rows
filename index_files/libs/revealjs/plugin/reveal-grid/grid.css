@@ -1,0 +1,14 @@
+.rows {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.row {
+  flex: 1;
+  min-height: 0;
+}
+
+.row > .columns {
+  height: 100%;
+}
