@@ -1,0 +1,15 @@
+$schema: "https://raw.githubusercontent.com/mcanouil/quarto-wizard/main/schema/schema-1.0.json"
+
+classes:
+  rows:
+    description: "Container for vertically stacked row sections. The vertical counterpart to `.columns`."
+    attributes:
+      - name: style
+        type: string
+        description: "Inline CSS styles for the rows container (e.g. height)."
+  row:
+    description: "A single row inside a `.rows` container. The vertical counterpart to `.column`."
+    attributes:
+      - name: style
+        type: string
+        description: "Inline CSS styles for the row (e.g. height, flex sizing)."

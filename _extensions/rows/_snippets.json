@@ -1,0 +1,37 @@
+{
+  "rows:basic": {
+    "prefix": "rows:basic",
+    "description": "Two stacked rows inside a rows container.",
+    "body": [
+      "::: {.rows}",
+      "::: {.row}",
+      "${1:Top content}",
+      ":::",
+      "::: {.row}",
+      "${2:Bottom content}",
+      ":::",
+      ":::"
+    ]
+  },
+  "rows:grid": {
+    "prefix": "rows:grid",
+    "description": "Grid layout combining rows and columns.",
+    "body": [
+      "::: {.rows}",
+      "::: {.row}",
+      "::: {.columns}",
+      "::: {.column}",
+      "${1:Top left}",
+      ":::",
+      "::: {.column}",
+      "${2:Top right}",
+      ":::",
+      ":::",
+      ":::",
+      "::: {.row}",
+      "${3:Bottom content}",
+      ":::",
+      ":::"
+    ]
+  }
+}
