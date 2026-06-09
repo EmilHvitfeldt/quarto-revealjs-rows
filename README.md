@@ -2,6 +2,8 @@
 
 A [Quarto](https://quarto.org) extension for [Reveal.js](https://quarto.org/docs/presentations/revealjs/) that adds `.rows` / `.row` containers — the vertical counterpart to Quarto's built-in `.columns` / `.column`. Combine the two to lay slide content out as an arbitrary grid.
 
+![](rows.webp)
+
 ## Installation
 
 ```bash
